@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+PACKAGE = "ardro_dyn"
+from dynamic_reconfigure.parameter_generator_catkin import *
+
+gen = ParameterGenerator()
+
+# Parameter definition, name, type, level, description, default, min, max
+gen.add("new_x",    double_t,   0, "New x:",                    -0.25, -1.5,   1.5)
+gen.add("new_y",    double_t,   0, "New y",                     -0.25, -1.5,   1.5)
+gen.add("new_z",    double_t,   0, "New z",                     1.0, -1.5,   1.5)
+gen.add("start",    bool_t,   0, "start",  False)
+
+# Generate the necessary files and exit the program - name of the node, prefix for cpp
+# for e.g <name>Config.h, THE LAST PARAMETER SHOULD BE EQUAL TO THE cfg FILE NAME WHITOUT EXTENSION
+exit(gen.generate(PACKAGE, "ardro_dyn", "ardroparams"))
+

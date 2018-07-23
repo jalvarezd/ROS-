@@ -1,0 +1,17 @@
+<package>
+	<name>introros2016_jalvarez_mrajanna</name>
+	<version>0.0.0</version>
+	<description>Introduction to ROS metapackage</description>
+	<maintainer email="julio.alvarez.d@hotmail.com">student</maintainer>
+	<license>BSD</license>
+	<url type="website">http://wiki.ros.org/student</url>
+	<!-- INCLUDE DEPENDENT NODES  -->
+	<run_depend>ardrone_move</run_depend>
+	<run_depend>ardro_dyn_node</run_depend>	
+	<run_depend>ardrone_move</run_depend>	
+	<run_depend>ardro_dyb_node</run_depend>
+	<buildtool_depend>catkin</buildtool_depend>
+	<export>
+		<metapackage/>
+	</export>
+</package>
